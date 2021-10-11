@@ -6,11 +6,13 @@ import android.util.Log
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     @Inject
+    @Named("String1")
     lateinit var testString: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
